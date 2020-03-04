@@ -6,16 +6,25 @@ namespace _1047
     {
         static void Main(string[] args)
         {
-            int a, b, c, d, hora, min;
+            int a, b, c, d, hora, min, instInicial, instFinal, duracao;
             string[] entrada = Console.ReadLine().Split(' ');
             a = int.Parse(entrada[0]);
             b = int.Parse(entrada[1]);
             c = int.Parse(entrada[2]);
             d = int.Parse(entrada[3]);
-            
-            if(a <= c && b > d)
 
-            Console.WriteLine($"O JOGO DUROU {hora} HORA(S) E {min} MINUTO(S)");
+            instInicial = 60 * a + b;
+            instFinal = 60 * c + d;
+
+            if (instInicial >= instFinal)
+                duracao = 24 * 60 + instFinal - instInicial;
+            else
+                duracao = instFinal - instInicial;
+
+            hora = duracao / 60;
+            min = duracao % 60;
+
+            Console.WriteLine("O JOGO DUROU {0} HORA(S) E {1} MINUTO(S)", hora, min);
             Console.ReadKey();
         }
     }
