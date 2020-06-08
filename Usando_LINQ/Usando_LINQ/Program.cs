@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Usando_LINQ
 {
@@ -63,6 +62,7 @@ namespace Usando_LINQ
             {
                 Console.WriteLine("\n{0}", obj);
             }
+
              /*
              This code produces the following output:
              {index=0, str=}
